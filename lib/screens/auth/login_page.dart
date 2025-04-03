@@ -43,11 +43,28 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                // Gambar lebih besar dan diletakkan di atas form
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(16),
+                  child: Image.asset(
+                    'assets/img/auth.jpg',
+                    width: 250, // Ukuran gambar diperbesar
+                    height: 250,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                SizedBox(height: 30),
+                // Judul
                 Text(
                   'Welcome Back!',
-                  style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                    fontSize: 32,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black87,
+                  ),
                 ),
                 SizedBox(height: 20),
+                // Form login dengan desain lebih modern dan minimalis
                 _buildLoginForm(),
               ],
             ),
@@ -62,43 +79,61 @@ class _LoginPageState extends State<LoginPage> {
       key: _formKey,
       child: Column(
         children: [
+          // Kolom input username dengan sudut membulat dan desain yang lebih modern
           TextFormField(
             controller: _usernameController,
             decoration: InputDecoration(
               labelText: "Username",
-              border: OutlineInputBorder(),
-              prefixIcon: Icon(Icons.person),
+              labelStyle: TextStyle(color: Colors.blueAccent),
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(30), // Sudut membulat
+              ),
+              prefixIcon: Icon(Icons.person, color: Colors.blueAccent),
             ),
             validator:
                 (value) => value!.isEmpty ? 'Please enter your username' : null,
           ),
           SizedBox(height: 20),
+          // Kolom input password yang lebih modern
           TextFormField(
             controller: _passwordController,
             obscureText: true,
             decoration: InputDecoration(
               labelText: "Password",
-              border: OutlineInputBorder(),
-              prefixIcon: Icon(Icons.lock),
+              labelStyle: TextStyle(color: Colors.blueAccent),
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(30), // Sudut membulat
+              ),
+              prefixIcon: Icon(Icons.lock, color: Colors.blueAccent),
             ),
             validator:
                 (value) => value!.isEmpty ? 'Please enter your password' : null,
           ),
           SizedBox(height: 20),
+          // Tombol Login dengan warna yang lebih menarik dan kontras
           ElevatedButton(
             onPressed: _login,
-            child: Text("Login", style: TextStyle(fontSize: 18)),
+            child: Text(
+              "Login",
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
             style: ElevatedButton.styleFrom(
               padding: EdgeInsets.symmetric(vertical: 16, horizontal: 40),
+              backgroundColor: Colors.blueAccent, // Warna biru cerah
+              foregroundColor: Colors.white, // Warna teks putih untuk kontras
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(30),
               ),
             ),
           ),
           SizedBox(height: 20),
+          // Link registrasi dengan warna biru agar tetap terlihat jelas
           TextButton(
             onPressed: () => Navigator.pushNamed(context, '/register'),
-            child: Text('Don\'t have an account? Register here'),
+            child: Text(
+              'Don\'t have an account? Register here',
+              style: TextStyle(color: Colors.blueAccent),
+            ),
           ),
         ],
       ),

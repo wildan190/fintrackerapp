@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.teal,
-        scaffoldBackgroundColor: Colors.teal.shade50,
+        scaffoldBackgroundColor: Colors.white,
         textTheme: TextTheme(
           displayLarge: TextStyle(
             fontSize: 32,
@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
           bodyLarge: TextStyle(fontSize: 16, color: Colors.teal.shade800),
         ),
         appBarTheme: AppBarTheme(
-          backgroundColor: Colors.teal,
+          backgroundColor: Colors.white,
           foregroundColor: Colors.white,
           elevation: 0,
         ),
