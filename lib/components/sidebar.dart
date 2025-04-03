@@ -24,9 +24,9 @@ class Sidebar extends StatelessWidget {
           ),
           _buildDrawerItem(context, Icons.dashboard, 'Dashboard', 0),
           // _buildDrawerItem(context, Icons.pie_chart, 'Budget', 1),
-          _buildDrawerItem(context, Icons.account_balance_wallet, 'Income', 2),
-          _buildDrawerItem(context, Icons.attach_money, 'Expenses', 3),
-          _buildDrawerItem(context, Icons.calendar_today, 'Monthly Plan', 4),
+          _buildDrawerItem(context, Icons.account_balance_wallet, 'Income', 1),
+          _buildDrawerItem(context, Icons.attach_money, 'Expenses', 2),
+          _buildDrawerItem(context, Icons.calendar_today, 'Monthly Plan', 3),
 
           // Add the Logout button at the bottom
           Divider(), // Divider to separate the logout button
