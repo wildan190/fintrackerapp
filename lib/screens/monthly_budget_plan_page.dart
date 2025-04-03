@@ -5,7 +5,7 @@ class MonthlyBudgetPlanPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       // Hapus AppBar di sini
-      body: Center(child: Text('Here is your monthly budget plan!')),
+      body: Center(child: Text('FITUR INI DALAM TAHAP PENGEMBANGAN')),
     );
   }
 }
