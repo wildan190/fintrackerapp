@@ -45,25 +45,25 @@ class _DashboardPageState extends State<DashboardPage> {
   final ExpensesService _expensesService = ExpensesService();
 
   // Load Total Budget
-  Future<void> _loadTotalBudget() async {
-    try {
-      final List<Map<String, dynamic>> budgets =
-          await _budgetService.getBudgets();
-      double sum = 0.0;
-      if (budgets.isNotEmpty) {
-        for (var budget in budgets) {
-          sum += budget['amount'];
-        }
-      }
-      setState(() {
-        totalBudget = sum;
-      });
-    } catch (e) {
-      setState(() {
-        totalBudget = 0.0;
-      });
-    }
-  }
+  // Future<void> _loadTotalBudget() async {
+  //   try {
+  //     final List<Map<String, dynamic>> budgets =
+  //         await _budgetService.getBudgets();
+  //     double sum = 0.0;
+  //     if (budgets.isNotEmpty) {
+  //       for (var budget in budgets) {
+  //         sum += budget['amount'];
+  //       }
+  //     }
+  //     setState(() {
+  //       totalBudget = sum;
+  //     });
+  //   } catch (e) {
+  //     setState(() {
+  //       totalBudget = 0.0;
+  //     });
+  //   }
+  // }
 
   // Load Total Income
   Future<void> _loadTotalIncome() async {
@@ -141,7 +141,7 @@ class _DashboardPageState extends State<DashboardPage> {
   Future<void> _onRefresh() async {
     // Show loading indicator during refresh
     await Future.wait([
-      _loadTotalBudget(),
+      // _loadTotalBudget(),
       _loadTotalIncome(),
       _loadRecentIncomes(),
       _loadTotalExpenses(),
@@ -154,7 +154,7 @@ class _DashboardPageState extends State<DashboardPage> {
     super.initState();
     // Load initial data
     Future.microtask(() async {
-      await _loadTotalBudget();
+      // await _loadTotalBudget();
       await _loadTotalIncome();
       await _loadRecentIncomes();
       await _loadTotalExpenses();
@@ -214,43 +214,43 @@ class _DashboardPageState extends State<DashboardPage> {
                       SizedBox(height: 20),
 
                       // Budget Card
-                      Card(
-                        elevation: 4.0,
-                        child: Padding(
-                          padding: EdgeInsets.all(16.0),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'Total Budget',
-                                    style: TextStyle(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                  SizedBox(height: 8),
-                                  Text(
-                                    _formatRupiah(totalBudget),
-                                    style: TextStyle(
-                                      fontSize: 20,
-                                      color: Colors.green,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              Icon(
-                                Icons.attach_money,
-                                size: 40,
-                                color: Colors.green,
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                      SizedBox(height: 20),
+                      // Card(
+                      //   elevation: 4.0,
+                      //   child: Padding(
+                      //     padding: EdgeInsets.all(16.0),
+                      //     child: Row(
+                      //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      //       children: [
+                      //         Column(
+                      //           crossAxisAlignment: CrossAxisAlignment.start,
+                      //           children: [
+                      //             Text(
+                      //               'Total Budget',
+                      //               style: TextStyle(
+                      //                 fontSize: 18,
+                      //                 fontWeight: FontWeight.bold,
+                      //               ),
+                      //             ),
+                      //             SizedBox(height: 8),
+                      //             Text(
+                      //               _formatRupiah(totalBudget),
+                      //               style: TextStyle(
+                      //                 fontSize: 20,
+                      //                 color: Colors.green,
+                      //               ),
+                      //             ),
+                      //           ],
+                      //         ),
+                      //         Icon(
+                      //           Icons.attach_money,
+                      //           size: 40,
+                      //           color: Colors.green,
+                      //         ),
+                      //       ],
+                      //     ),
+                      //   ),
+                      // ),
+                      // SizedBox(height: 20),
 
                       // Total Income Card
                       Card(

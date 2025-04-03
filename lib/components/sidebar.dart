@@ -23,7 +23,7 @@ class Sidebar extends StatelessWidget {
             ),
           ),
           _buildDrawerItem(context, Icons.dashboard, 'Dashboard', 0),
-          _buildDrawerItem(context, Icons.pie_chart, 'Budget', 1),
+          // _buildDrawerItem(context, Icons.pie_chart, 'Budget', 1),
           _buildDrawerItem(context, Icons.account_balance_wallet, 'Income', 2),
           _buildDrawerItem(context, Icons.attach_money, 'Expenses', 3),
           _buildDrawerItem(context, Icons.calendar_today, 'Monthly Plan', 4),
