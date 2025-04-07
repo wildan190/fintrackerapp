@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:flutter/material.dart';
 import 'package:fintrackerapp/services/auth.dart';
 
@@ -23,6 +25,7 @@ class _LoginPageState extends State<LoginPage> {
 
       if (user != null) {
         // Jika login sukses, pindah ke dashboard
+        // ignore: use_build_context_synchronously
         Navigator.pushReplacementNamed(context, '/dashboard');
       } else {
         // Jika gagal, tampilkan pesan error
