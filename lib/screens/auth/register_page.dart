@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:fintrackerapp/services/auth.dart';
 
 class RegisterPage extends StatefulWidget {
+  const RegisterPage({super.key});
+
   @override
   _RegisterPageState createState() => _RegisterPageState();
 }
@@ -138,10 +140,6 @@ class _RegisterPageState extends State<RegisterPage> {
           // Tombol Register dengan desain yang menarik dan kontras
           ElevatedButton(
             onPressed: _register,
-            child: Text(
-              "Register",
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-            ),
             style: ElevatedButton.styleFrom(
               padding: EdgeInsets.symmetric(vertical: 16, horizontal: 40),
               backgroundColor: Colors.blueAccent, // Warna biru cerah
@@ -149,6 +147,10 @@ class _RegisterPageState extends State<RegisterPage> {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(30),
               ),
+            ),
+            child: Text(
+              "Register",
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
           ),
           SizedBox(height: 20),

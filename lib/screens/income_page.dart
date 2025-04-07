@@ -3,6 +3,8 @@ import 'package:intl/intl.dart';
 import 'package:fintrackerapp/services/income.dart'; // Assuming you have this service
 
 class IncomePage extends StatefulWidget {
+  const IncomePage({super.key});
+
   @override
   _IncomePageState createState() => _IncomePageState();
 }
@@ -106,7 +108,6 @@ class _IncomePageState extends State<IncomePage> {
             SizedBox(height: 16),
             ElevatedButton(
               onPressed: _addIncome,
-              child: Text('Add Income'),
               style: ElevatedButton.styleFrom(
                 padding: EdgeInsets.symmetric(vertical: 16, horizontal: 40),
                 shape: RoundedRectangleBorder(
@@ -116,6 +117,7 @@ class _IncomePageState extends State<IncomePage> {
                     Colors
                         .blueAccent, // Use 'backgroundColor' instead of 'primary'
               ),
+              child: Text('Add Income'),
             ),
             SizedBox(height: 32),
             // Income List

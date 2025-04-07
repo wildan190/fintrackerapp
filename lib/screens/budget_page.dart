@@ -3,6 +3,8 @@ import 'package:intl/intl.dart';
 import '../services/budget.dart';
 
 class BudgetPage extends StatefulWidget {
+  const BudgetPage({super.key});
+
   @override
   _BudgetPageState createState() => _BudgetPageState();
 }

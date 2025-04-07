@@ -1,5 +1,4 @@
 import 'package:fintrackerapp/db/db_helper.dart'; // Assuming you have DB Helper setup
-import 'package:sqflite/sqflite.dart';
 
 class IncomeService {
   final DBHelper _dbHelper = DBHelper();

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class Sidebar extends StatelessWidget {
   final Function(int) onItemSelected; // Callback untuk navigasi
 
-  const Sidebar({required this.onItemSelected});
+  const Sidebar({super.key, required this.onItemSelected});
 
   @override
   Widget build(BuildContext context) {

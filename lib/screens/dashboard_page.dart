@@ -8,6 +8,8 @@ import 'monthly_budget_plan_page.dart';
 import 'package:intl/intl.dart';
 
 class DashboardPage extends StatefulWidget {
+  const DashboardPage({super.key});
+
   @override
   _DashboardPageState createState() => _DashboardPageState();
 }
@@ -19,14 +21,14 @@ class _DashboardPageState extends State<DashboardPage> {
   List<Map<String, dynamic>> recentIncomes = [];
   List<Map<String, dynamic>> recentExpenses = [];
 
-  static List<Widget> _pages = [
+  static final List<Widget> _pages = [
     Center(child: Text('Welcome...')),
     IncomePage(),
     ExpensesPage(),
     MonthlyBudgetPlanPage(),
   ];
 
-  static List<String> _titles = [
+  static final List<String> _titles = [
     'Dashboard',
     'Income',
     'Expenses',

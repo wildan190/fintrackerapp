@@ -5,6 +5,8 @@ import 'package:fintrackerapp/services/expenses.dart'; // Import service expense
 import 'package:intl/intl.dart'; // Untuk format tanggal
 
 class ExpensesPage extends StatefulWidget {
+  const ExpensesPage({super.key});
+
   @override
   _ExpensesPageState createState() => _ExpensesPageState();
 }
@@ -150,7 +152,6 @@ class _ExpensesPageState extends State<ExpensesPage> {
             // Button untuk menambah pengeluaran
             ElevatedButton(
               onPressed: _addExpense,
-              child: Text('Add Expense'),
               style: ElevatedButton.styleFrom(
                 padding: EdgeInsets.symmetric(vertical: 16, horizontal: 40),
                 shape: RoundedRectangleBorder(
@@ -158,6 +159,7 @@ class _ExpensesPageState extends State<ExpensesPage> {
                 ),
                 backgroundColor: Colors.blueAccent,
               ),
+              child: Text('Add Expense'),
             ),
             SizedBox(height: 32),
 

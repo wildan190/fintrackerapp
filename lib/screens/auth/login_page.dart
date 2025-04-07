@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:fintrackerapp/services/auth.dart';
 
 class LoginPage extends StatefulWidget {
+  const LoginPage({super.key});
+
   @override
   _LoginPageState createState() => _LoginPageState();
 }
@@ -113,10 +115,6 @@ class _LoginPageState extends State<LoginPage> {
           // Tombol Login dengan warna yang lebih menarik dan kontras
           ElevatedButton(
             onPressed: _login,
-            child: Text(
-              "Login",
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-            ),
             style: ElevatedButton.styleFrom(
               padding: EdgeInsets.symmetric(vertical: 16, horizontal: 40),
               backgroundColor: Colors.blueAccent, // Warna biru cerah
@@ -124,6 +122,10 @@ class _LoginPageState extends State<LoginPage> {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(30),
               ),
+            ),
+            child: Text(
+              "Login",
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
           ),
           SizedBox(height: 20),
